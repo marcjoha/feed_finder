@@ -1,7 +1,7 @@
 name: feed_finder
 description: A starting point for Dart libraries or applications.
-# version: 1.0.0
-# homepage: https://www.example.com
+version: 1.0.0
+homepage: https://github.com/marcjoha/feed_finder
 
 environment:
   sdk: '>=2.7.0 <3.0.0'
