@@ -1,4 +1,4 @@
-A library for extracting RSS/Atom feed links from a website.
+Extracts RSS/Atom feed links from a website.
 
 Will both look for feeds in the <link> tags, but also throughout the website itself.
 
