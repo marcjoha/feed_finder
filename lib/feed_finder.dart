@@ -8,7 +8,7 @@ import 'package:webfeed/webfeed.dart';
 /// elements in <head> and as unstructured links in the <body>.
 class FeedFinder {
   /// Returns feeds found on `url`
-  static scrape(String url) async {
+  static Future<List<String>> scrape(String url) async {
     var results = [];
     var candidates = [];
 
