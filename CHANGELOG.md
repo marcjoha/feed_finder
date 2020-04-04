@@ -1,5 +1,9 @@
 ## 1.0.1
 
+- Missing return type
+
+## 1.0.1
+
 - Doc fixes for better score on pub.dev
 
 ## 1.0.0
