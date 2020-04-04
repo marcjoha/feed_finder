@@ -2,7 +2,12 @@ import 'package:html/parser.dart';
 import 'package:http/http.dart' as http;
 import 'package:webfeed/webfeed.dart';
 
+/// A convenicence class for finding feeds on a website
+///
+/// FeedFinder is looking for both RSS and Atom feeds, both as structured
+/// elements in <head> and as unstructured links in the <body>.
 class FeedFinder {
+  /// Returns feeds found on `url`
   static scrape(String url) async {
     var results = [];
     var candidates = [];
