@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Fixed an issue with returning List<dynamic> instead of List<String>
+
 ## 1.0.2
 
 - Missing return type
