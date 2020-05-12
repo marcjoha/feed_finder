@@ -22,6 +22,9 @@ class FeedFinder {
       return results;
     }
 
+    var uri = Uri.parse(url).removeFragment();
+    var base = uri.scheme + '://' + uri.host;
+
     // Look for feed candidates in head
     for (var link in document.querySelectorAll("link[rel='alternate']")) {
       var type = link.attributes['type'];
@@ -29,14 +32,13 @@ class FeedFinder {
         if (type.contains('rss') || type.contains('xml')) {
           var href = link.attributes['href'];
           if (href != null) {
+            // Add base to relative URLs
+            href = href.startsWith('/') ? base + href : href;
             candidates.add(href);
           }
         }
       }
     }
-
-    var uri = Uri.parse(url).removeFragment();
-    var base = uri.scheme + '://' + uri.host;
 
     // Look for feed candidates in body
     for (var a in document.querySelectorAll('a')) {
