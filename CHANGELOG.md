@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Fix for relative URLs found in <head>
+
 ## 1.0.3
 
 - Fixed an issue with returning List<dynamic> instead of List<String>
