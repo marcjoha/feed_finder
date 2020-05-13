@@ -6,7 +6,8 @@ main() async {
     'https://www.protocol.com/',
     'https://www.dcrainmaker.com/',
     'https://rikatillsammans.se/',
-    'https://strengthrunning.com/'
+    'https://strengthrunning.com/',
+    'http://www.europe-v-facebook.org/'
   ];
   for (var link in links) {
     print(await FeedFinder.scrape(link));
