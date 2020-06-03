@@ -1,6 +1,5 @@
 import 'package:html/parser.dart';
 import 'package:http/http.dart' as http;
-import 'package:webfeed/webfeed.dart';
 
 /// A convenicence class for finding feeds on a website
 ///
@@ -64,23 +63,10 @@ class FeedFinder {
 
     // Verify candidates
     for (var candidate in candidates) {
-      var response;
       try {
-        response = await http.get(candidate);
+        await http.get(candidate);
       } catch (e) {
         continue;
-      }
-
-      // Check for both RSS and Atom feeds
-      try {
-        RssFeed.parse(response.body);
-      } catch (e) {
-        try {
-          AtomFeed.parse(response.body);
-        } catch (e) {
-          // Neither RSS nor Atom, go to next
-          continue;
-        }
       }
 
       results.add(candidate);

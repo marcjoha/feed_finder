@@ -1,3 +1,7 @@
+## 1.0.6
+
+- Removed dependency on webfeed, which relies on a very old XML lib.
+
 ## 1.0.5
 
 - Fix for naked URLs in <body>
