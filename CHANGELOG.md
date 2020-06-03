@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Fix for naked URLs in <body>
+
 ## 1.0.4
 
 - Fix for relative URLs found in <head>

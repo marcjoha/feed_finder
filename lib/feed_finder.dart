@@ -32,7 +32,7 @@ class FeedFinder {
         if (type.contains('rss') || type.contains('xml')) {
           var href = link.attributes['href'];
           if (href != null) {
-            // Add base to relative URLs
+            // Fix relative URLs
             href = href.startsWith('/') ? base + href : href;
             candidates.add(href);
           }
@@ -47,9 +47,13 @@ class FeedFinder {
         if (href.contains('rss') ||
             href.contains('xml') ||
             href.contains('feed')) {
-          // Add base to relative URLs
+          // Fix relative URLs
           href = href.startsWith('/') ? base + href : href;
           href = href.endsWith('/') ? href.substring(0, href.length - 2) : href;
+
+          // Fix naked URLs
+          href = !href.startsWith('http') ? base + '/' + href : href;
+
           candidates.add(href);
         }
       }
