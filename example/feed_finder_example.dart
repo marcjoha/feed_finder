@@ -11,14 +11,17 @@ main() async {
   ];
 
   for (var link in links) {
-    print("Default:");
-    print(await FeedFinder.scrape(link));
+    print("Default setup:");
+    print(await FeedFinder.scrape(link)); // Scrape from head, body and verify if content is right
 
     print("With disable verification:");
-    print(await FeedFinder.scrape(link, verify: false));
+    print(await FeedFinder.scrape(link, verify: false)); // Disable verification faster results
+
+    print("With disable parsing from head:");
+    print(await FeedFinder.scrape(link, parseFromHead: false)); // You can scrape only from body
 
     print("With disable parsing from body:");
-    print(await FeedFinder.scrape(link, parseFromBody: false));
+    print(await FeedFinder.scrape(link, parseFromBody: false)); // You can scrape only from head
 
     print("With disable parsing from body and verification:");
     print(await FeedFinder.scrape(link, parseFromBody: false, verify: false));
