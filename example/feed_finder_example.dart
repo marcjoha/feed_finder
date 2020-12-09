@@ -9,7 +9,18 @@ main() async {
     'https://strengthrunning.com/',
     'http://www.europe-v-facebook.org/'
   ];
+
   for (var link in links) {
+    print("Default:");
     print(await FeedFinder.scrape(link));
+
+    print("With disable verification:");
+    print(await FeedFinder.scrape(link, verify: false));
+
+    print("With disable parsing from body:");
+    print(await FeedFinder.scrape(link, parseFromBody: false));
+
+    print("With disable parsing from body and verification:");
+    print(await FeedFinder.scrape(link, parseFromBody: false, verify: false));
   }
 }
