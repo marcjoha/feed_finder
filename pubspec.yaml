@@ -9,7 +9,12 @@ environment:
 dependencies:
   http: ^0.12.0+4
   html: ^0.14.0+3
-  webfeed: ^0.4.2
+  #webfeed: ^0.6.0
+  webfeed:
+    git:
+      url: https://github.com/mjablecnik/webfeed.git
+      ref: master
+
 
 dev_dependencies:
   pedantic: ^1.8.0
