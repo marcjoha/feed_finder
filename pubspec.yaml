@@ -1,14 +1,14 @@
 name: feed_finder
 description: A library for extracting RSS/Atom feed links from websites, either in <head> or as regular links on the website itself.
-version: 1.0.6
+version: 1.0.7
 homepage: https://github.com/marcjoha/feed_finder
 
 environment:
   sdk: '>=2.7.0 <3.0.0'
 
 dependencies:
-  http: ^0.12.0+4
-  html: ^0.14.0+3
+  http: ^0.13.0
+  html: ^0.15.0
 
 dev_dependencies:
   pedantic: ^1.8.0

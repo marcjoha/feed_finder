@@ -1,3 +1,7 @@
+## 1.0.7
+
+- Updated dependencies
+
 ## 1.0.6
 
 - Removed dependency on webfeed, which relies on a very old XML lib.

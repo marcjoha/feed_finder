@@ -15,7 +15,7 @@ class FeedFinder {
     var response;
     var document;
     try {
-      response = await http.get(url);
+      response = await http.get(Uri.parse(url));
       document = parse(response.body);
     } catch (e) {
       return results;
@@ -64,7 +64,7 @@ class FeedFinder {
     // Verify candidates
     for (var candidate in candidates) {
       try {
-        await http.get(candidate);
+        await http.get(Uri.parse(candidate));
       } catch (e) {
         continue;
       }
