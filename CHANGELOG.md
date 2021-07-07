@@ -1,3 +1,7 @@
+## 1.0.8
+
+- Implemented some configuraiton options per input from mjablecnik
+
 ## 1.0.7
 
 - Updated dependencies
