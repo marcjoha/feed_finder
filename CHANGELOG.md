@@ -1,3 +1,7 @@
+## 1.0.9
+
+- Null-safety
+
 ## 1.0.8
 
 - Implemented some configuration options per input from mjablecnik
