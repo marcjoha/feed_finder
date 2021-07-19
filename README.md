@@ -1,5 +1,7 @@
+# feed_finder
+
 Extracts RSS/Atom feed links from a website.
 
-Will both look for feeds in the <link> tags, but also throughout the website itself.
+Supports both explicit feeds in `<link>` tags, or links mentioned in the `<body>`.
 
-Modelled after https://alex.miller.im/posts/python-3-feedfinder-rss-detection-from-url/.
+Inspired and initially modelled after [python-3-feedfinder-rss-detection-from-url](https://alex.miller.im/posts/python-3-feedfinder-rss-detection-from-url/).
